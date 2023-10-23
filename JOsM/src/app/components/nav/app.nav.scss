@@ -1,15 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Libre+Caslon+Text:400,700&display=swap');
 
-body {
-  font-family: Libre Caslon Text;
-  background-color: #FFAB91;
-}
-
-.body-text {
-  padding-top: 20vh;
-  text-align: center;
-  position: relative;
-}
 
 .hamburger-icon {
   position: absolute;
@@ -64,87 +54,10 @@ div.menu-pane {
   position: absolute;
   transform: translateX(-105vw);
   transform-origin: (0, 0);
-  width: 60vw;
-  height: 80%;
+  width: 40vw;
+  height: 90%;
   transition: 1s ease-in-out;
   border-radius: 30px;
-}
-
-.menu-pane p {
-  color: black;
-  font-size: 1em;
-}
-
-.menu-pane nav {
-  padding-left: 10%;
-  padding-top: 5%;
-}
-
-.menu-pane h2{
-    margin-left: 35%;
-    color: wheat;
-}
-
-.menu-links li, a, span {
-      transition: 0.5s ease-in-out;
-}
-
-.menu-pane ul {
-  padding: 3%;
-  display: inline-block;
-}
-
-.menu-pane li {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  margin-left: 10px;
-    font-size: 1.2em;
-    list-style: none;
-}
-
-
-.menu-links li a {
-  color: white;
-  text-decoration: none;
-}
-
-
-.menu-links li:hover a {
-  color: #FFAB91;
-}
-
-.menu-links li:first-child:hover a {
-  color: black;  
-  background-color: #FFAB91;
-}
-
-#QC-info {
-  background-color: #FFAB91;
-    border: 2px solid;
-  border-color: #FFAB91;
-
-  display: flex;
-  opacity: 0;
-  
-}
-
-
-
-.menu-links li:first-child:hover #DC-info {
-opacity: 1;
-}
-
-#DC-info {
-  background-color: #FFAB91;
-    border: 2px solid;
-  border-color: #FFAB91;
-display: block;
-  opacity: 0;
-}
-
-
-.menu-links li:first-child a {
-  padding: 5px;
 }
 
 
@@ -157,4 +70,110 @@ input.hamburger-checkbox {
   width: 10vw;
   opacity: 0;
   height: 6vh;
+}
+
+nav {
+    margin-top: 20%;
+    font-family: Libre Caslon Text;
+    section {
+        color: white;
+        text-align: center;
+        width: 100%;
+        
+    }   
+}
+
+nav section ul {
+
+    margin: 0px;
+    overflow: hidden;
+    max-height: 0;
+    background: #ffffff;
+    transition: all 0.8s ease-in; /* Corregido el valor ease-in-out */
+    color: rgb(255, 255, 255);
+
+
+}
+
+nav section .mainBtn span a{
+    height: 40px;
+}
+
+nav section a {
+    font-size: 1.2em;
+    border-bottom: 2px solid white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    color: white;
+    mix-blend-mode: difference;
+
+}
+
+nav section:hover ul {
+    max-height:400px ;
+    overflow: auto;
+}
+
+
+nav .mainBtn{
+	position: relative;
+	&::before{
+        clip-path: polygon(0% 0%, 85% 0, 100% 50%, 85% 100%, 0% 100%);
+     	transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+		content: '';    
+		width: 20%;
+		height: 100%;
+		background: rgb(255, 255, 255);
+		position: absolute;
+		top: 0;
+		left: 0;
+    }
+
+
+    &:hover{
+        &::before{
+            clip-path: polygon(0% 0%, 95% 0, 100% 50%, 95% 100%, 0% 100%);
+    
+            background: rgb(255, 255, 255);
+            width: 97%;
+                          }
+    }
+        
+    span {
+        transition: 1s ease-in-out;
+        mix-blend-mode: difference;
+        }
+}
+
+
+nav section li{
+	position: relative;
+
+	&::before{
+
+        clip-path: polygon(0% 0%, 95% 0, 100% 50%, 95% 100%, 0% 100%);
+     	transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+		content: '';    
+		width: 20%;
+		height: 100%;
+		background: rgb(0, 0, 0);
+		position: absolute;
+		top: 0;
+		left: 0;
+    }
+
+    &:hover{
+        &::before{
+            clip-path: polygon(0% 0%, 95% 0, 100% 50%, 95% 100%, 0% 100%);
+            
+            background: rgb(0, 0, 0);
+            width: 90%;
+                          }
+    }
+        
+    a {
+        transition: 1s ease-in-out;
+        mix-blend-mode: difference;
+        }
 }
