@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Libre+Caslon+Text:400,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Open+Sans:wght@300&display=swap');
 
 .hamburger-icon {
-  float: right;
+  float: right; 
   position: fixed;
-  z-index: 1;
+  z-index: 3;
   top: 5vh;
   left: 5vw;
   padding-bottom: 2vh;
@@ -13,7 +13,7 @@
 .hamburger-icon span {
   height: 5px;
   width: 40px;
-  background-color: black;
+  background-color: rgb(255, 255, 255);
   display: block;
   margin: 5px 0px 5px 0px;
   transition: 0.7s ease-in-out;
@@ -51,7 +51,7 @@ display: none;
 }
 
 div.menu-pane {
-  z-index: 1;
+  z-index: 3;
   background-color: rgba(0, 0, 0, 0);
     position: fixed;
   transform: translateX(-105vw);
@@ -65,8 +65,8 @@ div.menu-pane {
 
 
 input.hamburger-checkbox {
-  position: absolute;
-  z-index: 3;
+  position: fixed;
+  z-index: 4;
   top: 5vh;
   left: 5vw;
   width: 10vw;
@@ -78,8 +78,8 @@ nav {
   position: relative;
   opacity: 1;
     margin-top: 30%;
-    font-family: Libre Caslon Text;
-
+    font-family: 'Montserrat';
+    font-weight: bold;
     section {
         color: white;
         text-align: center;
@@ -94,7 +94,6 @@ nav section ul {
     overflow: hidden;
     max-height: 0;
     transition: all 0.8s ease-in; /* Corregido el valor ease-in-out */
-    color: rgb(255, 255, 255);
 
 
 }
@@ -106,11 +105,11 @@ nav section .mainBtn span a{
 
 nav section a {
 
-    font-size: 1.2em;
+    font-size: .9em;
     text-decoration: none;
     display: block;
     padding: 10px;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     mix-blend-mode: difference;
 
 }
@@ -139,8 +138,10 @@ nav .mainBtn{
 
     &:hover{
         &::before{
+          color: rgb(0, 0, 0);
+
           clip-path: polygon(0% 0%, 95% 0, 100% 50%, 95% 100%, 0% 100%);
-          background-image:linear-gradient(to right, #f482002f, #012f4611)  ;
+          background-image:linear-gradient(to right, #f4820053, #012f4611)  ;
             width: 30%;
                           }
     }
@@ -171,7 +172,6 @@ nav section li{
     &:hover{
         &::before{
             clip-path: polygon(0% 0%, 95% 0, 100% 50%, 95% 100%, 0% 100%);
-            
             background-image:linear-gradient(to right, #f482002f, #012f4611)  ;
             width: 25%;
                           }
